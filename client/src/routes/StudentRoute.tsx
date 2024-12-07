@@ -4,6 +4,7 @@ import Signup from "../pages/student/Signup"
 import StudentProtectedRoute from "./StudentProtectedRoute"
 import Dashboard from "../pages/student/Dashboard"
 import Profile from "../pages/student/Profile"
+import StudentLayout from "../layouts/StudentLayout"
 
 
 const StudentRoute = () => {
@@ -11,10 +12,12 @@ const StudentRoute = () => {
     <Routes>
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
-      <Route element={<StudentProtectedRoute />}>
+      {/* <Route element={<StudentProtectedRoute />}> */}
+      <Route element={<StudentLayout/>}>
         <Route path="/" element={<Dashboard />} />
+        </Route>
         <Route path="/profile" element={<Profile />} />
-      </Route>
+      {/* </Route> */}
     </Routes>
   )
 }

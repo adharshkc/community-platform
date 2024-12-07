@@ -1,12 +1,8 @@
-import Navbar from "../../components/common/Navbar"
-import Sidebar from "../../components/common/Sidebar"
+import Home from "../../components/common/Home"
 
 const Dashboard = () => {
   return (
-    <>
-    <Navbar />
-    <Sidebar/>
-    </>
+    <Home />
   )
 }
 
